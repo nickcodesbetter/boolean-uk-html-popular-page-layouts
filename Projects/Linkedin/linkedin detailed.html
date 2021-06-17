@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Static Template</title>
+    <style>
+
+      body {
+       margin: 0;
+              }
+
+              * {
+        box-sizing: border-box;
+      }
+
+      .grid-container {
+        min-height: 100vh;
+        display: grid;
+        grid-template:
+        /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+        /* grid-auto-rows: minmax(200px, auto); */
+          "header header header" 50px
+          " left-menu1 main right-menu1 " 1fr
+          " left-menu1 main right-menu1 " 1fr
+          "left-menu1 main right-menu1 " 1fr /
+          200px 1fr 200px ;
+          border: 2px dotted yellow;
+      }
+
+      .main-header {
+        grid-area: header;
+        background-color: lightcoral;
+        display: grid;
+        grid-template:
+        
+        /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: minmax(200px, auto); */
+      }
+
+      .left-menu1 {
+        grid-area: left-menu1;
+        background-color: rgb(78, 247, 247);
+      }
+
+
+      .right-menu1 {
+        grid-area: right-menu1;
+        background-color: lightgreen;
+      }
+    
+
+      .main {
+        grid-area: main;
+        background-color: lightsalmon;
+        min-width: 400px;
+        /* grid-template: */
+        /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: minmax(200px, auto); */
+
+      }
+
+      .footer {
+        grid-area: footer;
+        background-color: lightseagreen;
+      }
+
+      .box {
+        
+
+        border: 2px dotted rgb(0, 0, 0);
+        /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: minmax(200px, auto); */
+      }
+      ul#menu li {
+        display: inline;
+        
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="main-header">
+        <div class="box">
+        <ul id="menu">
+          <li><img width="30px"src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt=""></li>
+          <li>Home</li>
+          <li>My Network</li>
+          <li>Jobs</li>
+          <li>Messaging</li>
+          <li>Me</li>
+          <li>Work</li>
+          <li>Post a </li>
+        </ul>
+</div>
+      </header>
+      <aside class="left-menu1">Left Menu1
+         <div class="box">
+           <img width="100px" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="">
+           <img src="" alt="">
+           <h4>Nicolas Marcora</h4>
+           <p>Head of Teaching UK at Boolean</p>
+           <hr>
+           <p>Who viewed your profile
+           </p>
+           <p>views of your post</p>
+           <hr>
+           
+         </div>
+         <div class="box"></div>
+         <div class="box"></div>
+</aside>
+      <main class="main">
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+      </main>
+     
+      <aside class="right-menu1">Right Menu1
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </aside>
+      
+    </div>
+</html>

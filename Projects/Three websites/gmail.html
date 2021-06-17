@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Static Template</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .grid-container {
+        min-height: 100vh;
+
+        display: grid;
+        grid-template:
+          "header header header" 50px
+          "left-menu1 main right-menu" 1fr
+          "left-menu2 main right-menu" 1fr
+          "footer main right-menu" 50px /
+          200px 1fr 200px;
+      }
+
+      .main-header {
+        grid-area: header;
+        background-color: lightcoral;
+      }
+
+      .left-menu1 {
+        grid-area: left-menu1;
+        background-color: lightcyan;
+      }
+
+      .left-menu2 {
+        grid-area: left-menu2;
+        background-color: rgb(240, 75, 255);
+      }
+
+      .right-menu {
+        grid-area: right-menu;
+        background-color: lightgreen;
+      }
+
+      .main {
+        grid-area: main;
+        background-color: lightsalmon;
+      }
+
+      .footer {
+        grid-area: footer;
+        background-color: lightseagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="main-header">Header</header>
+      <aside class="left-menu1">Left Menu1</aside>
+      <aside class="left-menu2">Left Menu2</aside>
+      <main class="main">Main</main>
+      <aside class="right-menu">Right Menu</aside>
+      <footer class="footer">Footer</footer>
+    </div>
+</html>
